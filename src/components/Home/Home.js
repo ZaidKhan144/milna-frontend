@@ -9,7 +9,7 @@ const Home = () => {
                 <p className="mt-6 text-2xl">Join or create group with people who share same interest.</p>
             </div>
             <div>
-                <img className="pt-40" src={homeIll} alt="Hangout"/>
+                <img className="py-40" src={homeIll} alt="Hangout"/>
             </div>
         </div>
     )
