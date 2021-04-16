@@ -1,7 +1,6 @@
-## Project Name 
+## Project Name & Pitch
 Milna
 
-## Project Pitch
 An app for arranging online groups that host in-person or virtual events for people with similar interests.
 
 ## Project Status
