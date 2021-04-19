@@ -2,7 +2,7 @@
     box-sizing: border-box;
 }
 
-.card-container {
+.group-card-container {
     position: relative;
 	display: inline-block;
 	overflow: hidden;
@@ -17,7 +17,7 @@
     border-radius: 5px;
 }
 
-.card{
+.group-card{
     padding: 0;
 	box-shadow: 0px 1px 1px 0px #ccc;
 	height: 200px;
@@ -25,18 +25,18 @@
     color: #000;
 }
 
-.card-header{
+.group-card-header{
     padding: 15px 19px 0;
 	display: flex;
 	align-items: center;
 }
-.card-image{
+.group-card-image{
     padding: 0;
 	border-radius: 5px;
 	max-width: 60px;
     height: 60px;
 }
-.card-title{
+.group-card-title{
     padding-left: 10px;
 	text-align: left;
     font-size: 23px;
@@ -45,7 +45,7 @@
 	font-weight: bold;
 	margin: 0;
 }
-.card-main{
+.group-card-main{
     font-size: 12px;
 	line-height: 1.584;
 	/* color: #fff; */
@@ -58,12 +58,12 @@
 .group-line{
     border-top: 2px solid rgb(155, 149, 149);
 }
-.card-main p:nth-child(2){
+.group-card-main p:nth-child(2){
     padding-top: 10px;
     font-size: 15px;
     color: rgb(63, 60, 60);
 }
-.card-main p:nth-child(3){
+.group-card-main p:nth-child(3){
     font-size: 18px;
 }
 
@@ -95,7 +95,7 @@
 	height: 46px;
 	content: '' !important;
 	position: absolute;
-	top: 20px;
+	top: 15px;
 	left: -10px;
 	background-image: url('./left-arrow-svgrepo-com.svg');
 	background-repeat: no-repeat;

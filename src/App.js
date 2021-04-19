@@ -4,7 +4,7 @@ import Home from './components/Home/Home'
 import About from './components/About/About'
 import HowItWorks from './components/HowItWorks/HowItWorks'
 import GroupCarousel from './components/Groups/Groups'
-
+import EventCarousel from './components/Events/Events'
 
 const App = () => {
   return (
@@ -15,6 +15,7 @@ const App = () => {
     <About />
     <HowItWorks />
     <GroupCarousel />
+    <EventCarousel />
       {/* <Switch>
         <Route exact path="/"> <Home /> </Route>
         <Route exact path="/"> <About /> </Route>
