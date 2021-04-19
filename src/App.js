@@ -3,7 +3,8 @@ import Nav from './components/Nav/Nav'
 import Home from './components/Home/Home'
 import About from './components/About/About'
 import HowItWorks from './components/HowItWorks/HowItWorks'
-import Groups from './components/Groups/Groups'
+import GroupCarousel from './components/Groups/Groups'
+
 
 const App = () => {
   return (
@@ -13,7 +14,7 @@ const App = () => {
     <Home />
     <About />
     <HowItWorks />
-    <Groups />
+    <GroupCarousel />
       {/* <Switch>
         <Route exact path="/"> <Home /> </Route>
         <Route exact path="/"> <About /> </Route>
