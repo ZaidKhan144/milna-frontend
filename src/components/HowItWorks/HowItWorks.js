@@ -5,6 +5,7 @@ import HowItWorksIllTwo from '../../illustrations/find-event.svg'
 import CurlTwo from '../../illustrations/curly-thing-2.svg'
 import HowItWorksIllThree from '../../illustrations/calendar.svg'
 
+
 const HowItWorks = () => {
     return (
         <div className="py-40 mx-60">
@@ -19,6 +20,7 @@ const HowItWorks = () => {
                     <div className="border-l-8 divider">
                     <p className="hiwPara pl-10 my-10 py-2">Do what you love, meet others who love it, 
                         find your community and the rest is history!</p></div>
+                        
                 </div>
             </div>
             <div className="mt-40 flex justify-between">

@@ -12,6 +12,7 @@ const About = () => {
                 <p className="text-2xl pr-40">Milna is an application for arranging online groups 
                     that host in-person or virtual events for people with similar interests.</p>
             </div>
+           
         </div>
     )
 }

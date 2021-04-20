@@ -27,10 +27,12 @@ code {
     @apply border-white rounded-t-md rounded-r-md rounded-l-md rounded-b-md;
   }
   .hiwPara{
-    @apply text-2xl
+    @apply text-2xl;
   }
   .flexing{
-    @apply flex flex-row-reverse
+    @apply flex flex-row-reverse;
   }
-  
+  .footerLinks{
+    @apply font-normal hover:no-underline text-sm;
+  }
 }
