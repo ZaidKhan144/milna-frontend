@@ -1,0 +1,30 @@
+
+@media (max-width: 768px){
+    .home{
+        margin: 0 40px;
+    }
+    .home-layout h1{
+        font-size: 2rem;
+        padding-top: 15rem;
+    }
+    .home-layout p{
+        font-size: 1.3rem;
+    }
+    .home-image img{
+        width: 300px;
+        padding: 200px 0;
+    }
+}
+
+@media (max-width: 640px){
+    .home{
+        flex-direction: column;
+    }
+    .home-layout h1{
+        font-size: 2.5rem;
+        padding-top: 10rem;
+    }
+    .home-image img{
+        padding: 100px 0;
+    }
+}

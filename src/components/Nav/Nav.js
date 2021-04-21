@@ -1,10 +1,11 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import './styles.css'
 
 const Nav = () => {
     return (
         
-        <div className="flex flex-row justify-around fixed z-10 inset-0 pt-5">
+        <div className="flex flex-row justify-between mx-20 fixed z-10 inset-0 pt-5 nav">
             <div>
                 <Link to="/">Milna</Link>
             </div>

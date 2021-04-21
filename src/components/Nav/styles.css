@@ -1,0 +1,16 @@
+@media (max-width: 768px){
+    .nav{
+        width: 88%;
+        margin: 0 40px;
+        justify-content: space-between;
+    }
+}
+
+
+@media (max-width: 640px) {
+    .nav{
+        margin: 0 40px;
+        justify-content: space-between;
+        width: 65%;
+    }
+}
