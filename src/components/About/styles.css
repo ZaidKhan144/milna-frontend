@@ -1,0 +1,26 @@
+
+@media (max-width: 768px) {
+    .about{
+        margin: 0 40px;
+    }
+    .about-text{
+        padding: 20px 40px;
+        padding-right: 0;
+    }
+    .about-text p{
+        padding-right: 0px;
+    }
+}
+
+@media (max-width: 640px){
+    .about{
+        flex-direction: column-reverse;
+    }
+    .about-text{
+        padding-left: 0;
+    }
+}
+
+@media (max-width: 900px){
+    
+}
