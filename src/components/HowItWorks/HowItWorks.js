@@ -20,7 +20,6 @@ const HowItWorks = () => {
                     <div className="border-l-8 divider">
                     <p className="hiwPara pl-10 my-10 py-2">Do what you love, meet others who love it, 
                         find your community and the rest is history!</p></div>
-                        
                 </div>
             </div>
             <div className="mt-40 flex justify-between">
