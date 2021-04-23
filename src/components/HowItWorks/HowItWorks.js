@@ -18,7 +18,7 @@ const HowItWorks = () => {
                 </div>
                 <div>
                     <div className="border-l-8 divider">
-                    <p className="hiwPara pl-10 my-10 py-2">Do what you love, meet others who love it, 
+                    <p className="hiw-Para pl-10 my-10 py-2 d">Do what you love, meet others who love it, 
                         find your community and the rest is history!</p></div>
                 </div>
             </div>
@@ -32,7 +32,7 @@ const HowItWorks = () => {
                 </div>
                 <div className="my-20 w-3/5 flexing float-right event-desc">
                     <div className="border-r-8 w-20 divider event-divider"> </div>
-                        <p className="text-right hiwPara "> Events are happening on just about any topic you can think of, 
+                        <p className="hiw-Para text-right">Events are happening on just about any topic you can think of, 
                             from online gaming and photography to yoga and hiking.</p>
                 </div>
             </div>
@@ -46,8 +46,8 @@ const HowItWorks = () => {
                     <img className="w-2/5 my-20" src={HowItWorksIllThree} alt="Calendar"/>
                 </div>
                 <div className="flex group-desc">
-                    <div className="border-l-8 divider w-10 h-15"></div>
-                    <p className="hiwPara w-2/4">Create groups and events to gather people together and explore shared interests.</p>
+                    <div className="border-l-8 divider w-10 h-15 "></div>
+                    <p className="hiw-Para w-2/4">Create groups and events to gather people together and explore shared interests.</p>
                 </div>
             </div>
         </div>

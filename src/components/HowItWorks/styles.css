@@ -63,10 +63,25 @@
     .howitworks h1{
         font-size: 3rem;
     }
-    .hiwPara{
+    .join-image img{
+        width: 100%;
+    }
+    .hiw-Para{
         padding-left: 20px; 
     }
-    .join-image img{
+    .event-desc p{
+        padding-left: 20px; 
+    }
+    .event-image img{
+        width: 80%;
+    }
+    .group{
+        margin-top: 200px;
+    }
+    .group-desc p {
+        padding-left: 0px;
+    }
+    .group-image img{
         width: 100%;
     }
 }

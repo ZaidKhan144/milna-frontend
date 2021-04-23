@@ -14,9 +14,9 @@ const Routes = () => {
             <Home />
             <About />
             <HowItWorks />
-            <GroupCarousel />
+            {/* <GroupCarousel />
             <EventCarousel />
-            <Footer />
+            <Footer /> */}
         </div>
     )
 }
