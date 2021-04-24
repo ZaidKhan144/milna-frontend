@@ -62,3 +62,18 @@
     left: 20px;
     top: 160px;
 }
+
+@media (max-width: 768px){
+	.event-card-container{
+		max-width: 315px;
+	}
+}
+
+@media (max-width: 640px){
+    .event-card-container{
+        max-width: 300px;
+    }
+    .slick-next:before{
+        left: -20px;
+    }
+}

@@ -71,7 +71,7 @@ const EventInfo = (props) => {
 
     return (
         <div className="news">
-        <h1 className="text-6xl font-bold">Upcoming Events</h1>
+        <h1 className="text-6xl font-bold">upcoming events</h1>
             <Slider {...settings}>{newsTemplate}</Slider>
         </div>
     );
