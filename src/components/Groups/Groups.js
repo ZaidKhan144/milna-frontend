@@ -72,7 +72,7 @@ const GroupInfo = (props) => {
 
     return (
         <div className="news">
-        <h1 className="text-6xl font-bold">Popular Groups</h1>
+        <h1 className="text-6xl font-bold">popular groups</h1>
             <Slider {...settings}>{newsTemplate}</Slider>
         </div>
     );

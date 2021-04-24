@@ -113,3 +113,27 @@
 	left: -35px;
 	background-image: url('./right-arrow-svgrepo-com.svg');
 }
+
+@media (max-width: 768px){
+	.carousel{
+		margin: 0 40px;
+	}
+	.group-card-container{
+		max-width: 325px;
+	}
+	.slick-prev:before{
+		left: 8px;
+	}
+	.slick-slider{
+		margin-left: 10px;
+	}
+}
+
+@media (max-width: 640px){
+	.news h1{
+		font-size: 2.8rem;
+	}
+	.group-card-container{
+		max-width: 300px;
+	}
+}

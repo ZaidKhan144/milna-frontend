@@ -14,8 +14,8 @@ const Routes = () => {
             <Home />
             <About />
             <HowItWorks />
-            {/* <GroupCarousel />
-            <EventCarousel />
+            <GroupCarousel />
+            {/* <EventCarousel />
             <Footer /> */}
         </div>
     )
