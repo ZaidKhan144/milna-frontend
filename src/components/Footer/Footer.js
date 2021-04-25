@@ -1,11 +1,12 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import './styles.css'
 
 const Footer = () => {
     return (
-        <div className="py-40 mx-60">
+        <div className="py-40 mx-60 footer">
             <div className="border-2 border-gray-600"></div>
-            <div className="flex justify-between w-3/6 items-center py-8">
+            <div className="flex justify-between w-3/6 items-center py-8 footer-header">
                 <h1 className="text-4xl">Create your own group!</h1>
                 <Link to="/" className="text-2xl border-2 p-3 rounded px-7">Get Started</Link>
             </div>
@@ -80,7 +81,7 @@ const Footer = () => {
                         </a>
                     </div>
                 </div>
-            <div className="flex flex-row space-x-4 sm:space-x-6 text-sm text-gray4 pt-2">
+            <div className="flex flex-row justify-around items-center w-5/12 pt-2 copyright">
                 <span className="text-white">&copy; 2021 Milna</span>
                 <a href="" className="footerLinks">Terms of Service</a>
                 <a href="" className="footerLinks">Privacy Policy</a>

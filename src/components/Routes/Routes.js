@@ -16,7 +16,7 @@ const Routes = () => {
             <HowItWorks />
             <GroupCarousel />
             <EventCarousel />
-            {/* <Footer /> */}
+            <Footer />
         </div>
     )
 }
