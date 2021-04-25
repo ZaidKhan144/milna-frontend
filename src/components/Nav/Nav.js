@@ -9,7 +9,7 @@ const Nav = () => {
             <div>
                 <Link to="/">Milna</Link>
             </div>
-            <ul className="flex">
+            <ul className="flex nav-links">
                 <li >
                     <Link to="/">Demo</Link>
                 </li>
