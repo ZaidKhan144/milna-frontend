@@ -8,7 +8,7 @@ const Footer = () => {
             <div className="border-2 border-gray-600"></div>
             <div className="flex justify-between w-3/6 items-center py-8 footer-header">
                 <h1 className="text-4xl">Create your own group!</h1>
-                <Link to="/" className="text-2xl border-2 p-3 rounded px-7">Get Started</Link>
+                <Link to="/signup" className="text-2xl border-2 p-3 rounded px-7">Get Started</Link>
             </div>
             <div className="border-2 border-gray-600 mb-8"></div>
             <div className="flex flex-col sm:flex-row justify-between">
