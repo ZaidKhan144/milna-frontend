@@ -1,29 +1,31 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-
+import { Header, Container, LoginForm, Divider, GoogleBtn } from './LogInStyles'
+import googleIcon from './google-icon.svg'
 
 const LogIn = () => {
     return (
         <div>
-            <div>
+            <Header>
                 <h1>Milna</h1>
-            </div>
-            <div>
-                <div>
+            </Header> 
+            <Container>
+                <LoginForm>
                     <h1>Log in to Milna</h1>
-                    <p>Don't have an account yet? <Link to="/signup">Sign up for free</Link></p>
-                    <button>Log in with Google</button>
-                    <div>
-                        <div></div>
-                        <h1>Or</h1>
-                        <div></div>
-                    </div>
+                    <p>Don't have an account yet? <Link to="/signup">&nbsp;Sign up for free</Link></p>
+                    <GoogleBtn> 
+                        <span><img src={googleIcon} alt=""/></span> 
+                        <span>Log in with Google</span> 
+                    </GoogleBtn>
+                    <Divider>
+                        <h2>Or</h2>
+                    </Divider>
                     <input type="text" placeholder="Email address" />
                     <input type="text" placeholder="Password" />
-                    <button>Log in</button>
-                </div>
-                <div></div>
-            </div>
+                    <button type="submit">Log in</button>
+                </LoginForm>
+                <div>Hello</div>
+            </Container>
         </div>
     )
 }
