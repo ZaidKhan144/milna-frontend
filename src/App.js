@@ -2,6 +2,7 @@ import { HashRouter, Switch, Route, BrowserRouter } from 'react-router-dom'
 
 import Routes from './components/Routes/Routes'
 import LogIn from './components/LogIn/LogIn'
+import SignUp from './components/SignUp/SignUp'
 
 const App = () => {
   return (
@@ -9,7 +10,8 @@ const App = () => {
     <HashRouter basename="/">
       <Switch>
         <Route path="/" exact> <Routes /> </Route>
-        <Route path="/login" exact> <LogIn /> </Route>   
+        <Route path="/login" exact> <LogIn /> </Route>  
+        <Route path="/signup" exact> <SignUp /> </Route> 
       </Switch>
     </HashRouter>
   );

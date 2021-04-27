@@ -18,7 +18,7 @@ export const Container = styled.div`
     display: flex;
     justify-content: space-around;
     align-items: center;
-    margin-top: 150px;
+    margin-top: 100px;
 
 `
 
@@ -93,12 +93,17 @@ export const GoogleBtn = styled.button`
     justify-content: space-around;
     align-items: center;
     padding: 0 70px;
+    transition: all .3s ease;
+
+    &:hover{
+        background-color: #f5eaea;
+    }
    
-        & span{
-            & img{
-                width: 16px;
-                height: 16px;
+        & span:nth-child(1){
+            width: 16px;
+            height: 16px;
+            & svg{
+               width: 100%;
             }
         }
-    
 `
