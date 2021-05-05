@@ -1,5 +1,5 @@
 import React from 'react'
-import homeIll from '../../illustrations/hangout.svg'
+import homeIll from '../../../illustrations/hangout.svg'
 import './styles.css'
 
 const Home = () => {

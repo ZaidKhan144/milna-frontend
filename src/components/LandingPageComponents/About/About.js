@@ -1,5 +1,5 @@
 import React from 'react'
-import aboutIll from '../../illustrations/having-fun.svg'
+import aboutIll from '../../../illustrations/having-fun.svg'
 import './styles.css'
 
 const About = () => {

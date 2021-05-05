@@ -1,9 +1,9 @@
 import React from 'react'
-import HowItWorksIllOne from '../../illustrations/status-update.svg' 
-import CurlOne from '../../illustrations/curly-thing-1.svg'
-import HowItWorksIllTwo from '../../illustrations/find-event.svg'
-import CurlTwo from '../../illustrations/curly-thing-2.svg'
-import HowItWorksIllThree from '../../illustrations/calendar.svg'
+import HowItWorksIllOne from '../../../illustrations/status-update.svg' 
+import CurlOne from '../../../illustrations/curly-thing-1.svg'
+import HowItWorksIllTwo from '../../../illustrations/find-event.svg'
+import CurlTwo from '../../../illustrations/curly-thing-2.svg'
+import HowItWorksIllThree from '../../../illustrations/calendar.svg'
 import './styles.css'
 
 const HowItWorks = () => {

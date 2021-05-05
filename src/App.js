@@ -1,8 +1,8 @@
 import { HashRouter, Switch, Route, BrowserRouter } from 'react-router-dom'
 
-import Routes from './components/Routes/Routes'
-import LogIn from './components/LogIn/LogIn'
-import SignUp from './components/SignUp/SignUp'
+import Routes from './components/LandingPageComponents/Routes/Routes'
+import LogIn from './components/LandingPageComponents/LogIn/LogIn'
+import SignUp from './components/LandingPageComponents/SignUp/SignUp'
 
 const App = () => {
   return (
