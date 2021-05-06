@@ -11,7 +11,7 @@ const Nav = () => {
             </div>
             <ul className="flex nav-links">
                 <li >
-                    <Link to="/demo">Demo</Link>
+                    <Link to="/groupMain">Demo</Link>
                 </li>
                 <li className="pl-8">
                     <Link to="/login">Log In</Link>

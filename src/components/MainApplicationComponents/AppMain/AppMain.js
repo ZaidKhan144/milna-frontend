@@ -15,7 +15,7 @@ const AppMain = () => {
             <BrowserRouter>
                 <Header>
                     <div>
-                        <NavLink to="/groupMain" activeClassName='active'>Groups</NavLink>
+                        <NavLink to="/groupMain" activeClassName='active' exact={true}>Groups</NavLink>
                         <NavLink to="/eventMain">Events</NavLink>
                     </div>
                 </Header>

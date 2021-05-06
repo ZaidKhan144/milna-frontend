@@ -13,8 +13,8 @@ const GroupData = [
     {
         id: 1,
         image: adventure2,
-        groupName: 'Adventures Around New York!',
-        location: 'Houston, TX',
+        groupName: 'Everything\'s All right New York!',
+        location: 'New York city, NY',
         description: 'Happy Hours, Socials, Watch Parties, Networking, and More!',
         members: '35 members'
     }
