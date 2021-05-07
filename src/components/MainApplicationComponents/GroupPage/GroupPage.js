@@ -1,5 +1,6 @@
 import React from 'react'
 import GroupData from '../GroupMain/GroupData'
+import { Container, Top, Bottom } from './GroupPageStyles'
 
 const GroupPage = ({groupPageId}) => {
 
@@ -17,7 +18,24 @@ const GroupPage = ({groupPageId}) => {
 
     return (
         <div>
-           <h1>{groupPageData.groupName}</h1>
+           <Container>
+                <Top>
+                    <div>
+                        <h1>{groupPageData.groupName}</h1>
+                        <p>{groupPageData.location}</p>
+                        <p>{groupPageData.members}</p>
+                        <p>{groupPageData.organizer}</p>
+                        <button>Join this Group</button>
+                    </div>
+                    <div>
+                        <img src={groupPageData.image} alt={groupPageData.groupName} />
+                    </div>
+                </Top>
+                <Bottom>
+                    <h1>What we're about</h1>
+                    <p>{groupPageData.description}</p>
+                </Bottom>
+            </Container>
         </div>
     )
 }
