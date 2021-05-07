@@ -11,7 +11,7 @@ const GroupMain = () => {
                 {
                     GroupData.map((gData) => {
                         return(
-                            <Link key={gData.id} to="/">
+                            <Link key={gData.id} to={`groupMain/${gData.id}`} >
                                 <div>
                                     <img src={gData.image} alt={gData.groupName} />
                                 </div>

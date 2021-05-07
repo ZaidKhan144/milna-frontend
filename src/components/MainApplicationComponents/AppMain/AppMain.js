@@ -1,9 +1,11 @@
 import React from 'react'
-import { Link, NavLink } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { HashRouter, Switch, Route, BrowserRouter } from 'react-router-dom'
-import { NavBar, Header } from './AppMainStyles'
+import { NavBar } from './AppMainStyles'
 import GroupMain from '../GroupMain/GroupMain'
 import EventMain from '../EventMain/EventMain'
+import GroupPage from '../GroupPage/GroupPage'
+import SplitHeader from '../SplitHeader/SplitHeader'
 
 const AppMain = () => {
     return (
@@ -13,15 +15,15 @@ const AppMain = () => {
                 <Link to="/">Start a new group</Link>
             </NavBar>
             <BrowserRouter>
-                <Header>
-                    <div>
-                        <NavLink to="/groupMain" activeClassName='active' exact={true}>Groups</NavLink>
-                        <NavLink to="/eventMain">Events</NavLink>
-                    </div>
-                </Header>
                 <Switch>
+                    <Route exact path="/groupMain/:id"></Route>
+                    <Route path="/"> <SplitHeader /> </Route>
+                </Switch>
+                <Switch>
+                    <Route path="/" exact> <SplitHeader /> </Route>
                     <Route path="/groupMain" exact> <GroupMain /> </Route>
                     <Route path="/eventMain" exact> <EventMain /> </Route>
+                    <Route path="/groupMain/:id" exact render={(groupPageProp) => <GroupPage groupPageId={groupPageProp.match.params.id} /> } />
                 </Switch>
             </BrowserRouter>
         </div>
