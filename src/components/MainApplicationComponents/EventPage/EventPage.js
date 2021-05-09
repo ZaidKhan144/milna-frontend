@@ -20,7 +20,7 @@ const EventPage = ({eventPageId}) => {
     return (
         
         <EventBody>
-        <Link to="/eventMain">Back</Link>
+            <Link to="/eventMain">Back</Link>
             <h1>{EventPageData.eventName}</h1>
             <p>Hosted by {EventPageData.host}</p>
                 <Container>
