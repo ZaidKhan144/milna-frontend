@@ -9,7 +9,7 @@ const GroupData = [
         location: 'Houston, TX',
         description: 'Happy Hours, Socials, Watch Parties, Networking, and More!',
         members: '35 members',
-        organizer: 'Organized by Alana Smith'
+        organizer: 'Alana Smith'
     },
     {
         id: 1,
@@ -18,7 +18,7 @@ const GroupData = [
         location: 'New York city, NY',
         description: 'Happy Hours, Socials, Watch Parties, Networking, and More!',
         members: '35 members',
-        organizer: 'Organized by Cate Blanchett'
+        organizer: 'Cate Blanchett'
     }
 ]
 

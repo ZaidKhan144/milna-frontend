@@ -24,7 +24,7 @@ const GroupPage = ({groupPageId}) => {
                         <h1>{groupPageData.groupName}</h1>
                         <p>{groupPageData.location}</p>
                         <p>{groupPageData.members}</p>
-                        <p>{groupPageData.organizer}</p>
+                        <p>Organized by {groupPageData.organizer}</p>
                         <button>Join this Group</button>
                     </div>
                     <div>

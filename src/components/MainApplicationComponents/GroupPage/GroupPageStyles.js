@@ -9,12 +9,9 @@ export const Container = styled.div`
 
 export const Top = styled.div`
     display: flex;
-    /* background-color: blue; */
-    /* justify-content: space-around; */
 
     & div:nth-child(1){
         
-        /* padding-left: 20px; */
         & h1{
             font-size: 20px;
             font-weight: bold;

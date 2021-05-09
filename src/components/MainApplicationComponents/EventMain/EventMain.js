@@ -10,7 +10,7 @@ const EventMain = () => {
                 {
                     EventData.map((eData) => {
                         return (
-                            <Link key={eData.id} to="/">
+                            <Link key={eData.id} to={`eventMain/${eData.id}`} >
                             <div>
                                 <img src={eData.image} alt={eData.eventName} />
                             </div>
