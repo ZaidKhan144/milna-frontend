@@ -1,21 +1,18 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 import { HashRouter, Switch, Route, BrowserRouter } from 'react-router-dom'
-import { NavBar } from './AppMainStyles'
 import GroupMain from '../GroupMain/GroupMain'
 import EventMain from '../EventMain/EventMain'
 import GroupPage from '../GroupPage/GroupPage'
 import SplitHeader from '../SplitHeader/SplitHeader'
 import EventPage from '../EventPage/EventPage'
+import CreateGroup from '../CreateGroup/CreateGroup'
+import AppMainNav from '../AppMainNav/AppMainNav'
 
 const AppMain = () => {
     return (
         <div>
-            <NavBar>
-                <h1><Link to="/">Milna</Link></h1>
-                <Link to="/">Start a new group</Link>
-            </NavBar>
             <BrowserRouter>
+                <AppMainNav />
                 <Switch>
                     <Route exact path="/groupMain/:id"></Route>
                     <Route exact path="/eventMain/:id"></Route>
@@ -27,6 +24,7 @@ const AppMain = () => {
                     <Route path="/eventMain" exact> <EventMain /> </Route>
                     <Route path="/groupMain/:id" exact render={(groupPageProp) => <GroupPage groupPageId={groupPageProp.match.params.id} /> } />
                     <Route path="/eventMain/:id" exact render={(eventPageProp) => <EventPage eventPageId={eventPageProp.match.params.id} /> } />
+                    <Route path="/createGroup" exact> <CreateGroup /> </Route>
                 </Switch>
             </BrowserRouter>
         </div>
