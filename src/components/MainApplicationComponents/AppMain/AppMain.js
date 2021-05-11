@@ -1,5 +1,5 @@
 import React from 'react'
-import { HashRouter, Switch, Route, BrowserRouter } from 'react-router-dom'
+import { HashRouter, Switch, Route, BrowserRouter, useLocation, useRouteMatch } from 'react-router-dom'
 import GroupMain from '../GroupMain/GroupMain'
 import EventMain from '../EventMain/EventMain'
 import GroupPage from '../GroupPage/GroupPage'
@@ -9,10 +9,15 @@ import CreateGroup from '../CreateGroup/CreateGroup'
 import AppMainNav from '../AppMainNav/AppMainNav'
 
 const AppMain = () => {
+    const location = useLocation()
+    // let match = useRouteMatch()
+
     return (
         <div>
-            <BrowserRouter>
+            <h1>{location.pathname}</h1>
+            
                 <AppMainNav />
+                {/* {location.pathname === '/createGroup' ? <AppMainNav /> : null} */}
                 <Switch>
                     <Route exact path="/groupMain/:id"></Route>
                     <Route exact path="/eventMain/:id"></Route>
@@ -26,7 +31,6 @@ const AppMain = () => {
                     <Route path="/eventMain/:id" exact render={(eventPageProp) => <EventPage eventPageId={eventPageProp.match.params.id} /> } />
                     <Route path="/createGroup" exact> <CreateGroup /> </Route>
                 </Switch>
-            </BrowserRouter>
         </div>
     )
 }
