@@ -9,12 +9,12 @@ import CreateGroup from '../CreateGroup/CreateGroup'
 import AppMainNav from '../AppMainNav/AppMainNav'
 
 const AppMain = () => {
-    const location = useLocation()
+    // const location = useLocation()
     // let match = useRouteMatch()
 
     return (
         <div>
-            <h1>{location.pathname}</h1>
+            {/* <h1>{location.pathname}</h1> */}
             
                 <AppMainNav />
                 {/* {location.pathname === '/createGroup' ? <AppMainNav /> : null} */}
