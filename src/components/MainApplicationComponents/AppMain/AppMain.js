@@ -5,7 +5,7 @@ import EventMain from '../EventMain/EventMain'
 import GroupPage from '../GroupPage/GroupPage'
 import SplitHeader from '../SplitHeader/SplitHeader'
 import EventPage from '../EventPage/EventPage'
-import CreateGroup from '../CreateGroup/CreateGroup'
+import CreateGroupForm from '../CreateGroupForm/CreateGroupForm'
 import AppMainNav from '../AppMainNav/AppMainNav'
 
 const AppMain = () => {
@@ -29,7 +29,7 @@ const AppMain = () => {
                     <Route path="/eventMain" exact> <EventMain /> </Route>
                     <Route path="/groupMain/:id" exact render={(groupPageProp) => <GroupPage groupPageId={groupPageProp.match.params.id} /> } />
                     <Route path="/eventMain/:id" exact render={(eventPageProp) => <EventPage eventPageId={eventPageProp.match.params.id} /> } />
-                    <Route path="/createGroup" exact> <CreateGroup /> </Route>
+                    <Route path="/createGroup" exact> <CreateGroupForm /> </Route>
                 </Switch>
         </div>
     )

@@ -17,7 +17,8 @@ export const MainForm = styled.div`
             font-weight: bold;
         }
         & input{
-            padding: 5px 0;
+            padding: 5px 10px;
+            color: #000;
         }
         & button{
             margin-top: 30px;

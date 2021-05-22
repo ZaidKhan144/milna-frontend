@@ -2,9 +2,13 @@ import React from 'react'
 import { Container } from './GroupMainStyles'
 import GroupData from './GroupData'
 import { Link } from 'react-router-dom'
+import { useSelector } from 'react-redux'
 
 const GroupMain = () => {
 
+        const groups = useSelector((state) => state.groups)
+
+        console.log(groups)
     return (
         <div>
             <Container>
