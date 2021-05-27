@@ -1,7 +1,11 @@
 import axios from 'axios'
 
-const url = 'http://localhost:5000/groups'
+const API = axios.create({ baseURL: 'http://localhost:5000' })
 
-export const fetchGroups = () => axios.get(url)
+export const fetchGroups = () => API.get('/groups')
 
-export const createGroup = (newGroup) => axios.post(url, newGroup)
+export const fetchGroup = (id) => API.get(`/groups/${id}`)
+
+export const createGroup = (newGroup) => API.post('/groups', newGroup)
+ 
+

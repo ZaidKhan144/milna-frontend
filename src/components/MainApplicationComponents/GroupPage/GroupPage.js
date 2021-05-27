@@ -1,39 +1,53 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import GroupData from '../GroupMain/GroupData'
 import { Container, Top, Bottom } from './GroupPageStyles'
+import { useSelector, useDispatch } from 'react-redux'
+import { useParams, useHistory } from 'react-router-dom'
+import { getGroup } from '../../../actions/groups'
 
 const GroupPage = ({groupPageId}) => {
 
-    // ID is in string so here we are converting it in Integer
+    const { group, groups } = useSelector((state) => state.groups)
+
+    const dispatch = useDispatch()
+    const history = useHistory()
+    const { id } = useParams()
+
+    useEffect(() => {
+        dispatch(getGroup(id))
+    }, [id])
+    
+    /* // ID is in string so here we are converting it in Integer
     let IntId = parseInt(groupPageId, 10)
     let groupPageData
 
-    for(let i = 0; i< GroupData.length; i++){
+    for(let i = 0; i< groups.length; i++){
         // Checking if both the ID's match 
-        if(GroupData[i].id === IntId){
+        if(groups[i].id === IntId){
             // if it does then put your data in groupPageData
-            groupPageData = GroupData[i]
+            groupPageData = groups[i]
         }
     }
-
+    */
+   console.log(group)
     return (
         <div>
            <Container>
                 <Top>
                     <div>
-                        <h1>{groupPageData.groupName}</h1>
-                        <p>{groupPageData.location}</p>
-                        <p>{groupPageData.members}</p>
-                        <p>Organized by {groupPageData.organizer}</p>
+                        <h1>{group.groupName}</h1>
+                        <p>{group.location}</p>
+                        <p>{group.members}</p>
+                        <p>Organized by {group.organizer}</p>
                         <button>Join this Group</button>
                     </div>
                     <div>
-                        <img src={groupPageData.image} alt={groupPageData.groupName} />
+                        <img src={group.selectedFile} alt={group.groupName} />
                     </div>
                 </Top>
                 <Bottom>
                     <h1>What we're about</h1>
-                    <p>{groupPageData.description}</p>
+                    <p>{group.description}</p>
                 </Bottom>
             </Container>
         </div>

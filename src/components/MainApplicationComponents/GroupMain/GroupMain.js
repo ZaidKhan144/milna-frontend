@@ -3,21 +3,26 @@ import { Container } from './GroupMainStyles'
 import GroupData from './GroupData'
 import { Link } from 'react-router-dom'
 import { useSelector } from 'react-redux'
+import { CircularProgressbar } from 'react-circular-progressbar'
+import 'react-circular-progressbar/dist/styles.css'
 
 const GroupMain = () => {
 
-        const groups = useSelector((state) => state.groups)
+        const { groups } = useSelector((state) => state.groups)
 
         console.log(groups)
     return (
+        !groups?.length ? <div style={{width: 50, height: 50 }}>
+            <CircularProgressbar value={66} text={66} />
+        </div> : (
         <div>
             <Container>
-                {
-                    GroupData.map((gData) => {
+                { 
+                    groups.map((gData) => {
                         return(
-                            <Link key={gData.id} to={`groupMain/${gData.id}`} >
+                            <Link key={gData._id} to={`groupMain/${gData._id}`}>
                                 <div>
-                                    <img src={gData.image} alt={gData.groupName} />
+                                    <img src={gData.selectedFile} alt={gData.groupName} />
                                 </div>
                                 <div>
                                     <h1>{gData.groupName}</h1>
@@ -31,6 +36,8 @@ const GroupMain = () => {
                 }
             </Container> 
         </div>
+        
+        )
     )
 }
 
