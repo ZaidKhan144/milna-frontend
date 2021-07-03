@@ -8,4 +8,4 @@ export const fetchGroup = (id) => API.get(`/groups/${id}`)
 
 export const createGroup = (newGroup) => API.post('/groups', newGroup)
  
-
+export const updateGroup = (id, updatedGroup) => API.patch(`/groups/${id}`, updatedGroup)

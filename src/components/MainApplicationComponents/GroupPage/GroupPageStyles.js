@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components'
+import { Edit } from '@styled-icons/boxicons-regular/Edit'
 
 export const Container = styled.div`
 
@@ -49,4 +50,8 @@ export const Bottom = styled.div`
         font-weight: bold;
     }
 
+`
+
+export const EditButton = styled(Edit)`
+    width: 10%;
 `

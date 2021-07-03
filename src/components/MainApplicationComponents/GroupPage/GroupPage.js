@@ -1,11 +1,11 @@
 import React, { useEffect } from 'react'
 import GroupData from '../GroupMain/GroupData'
-import { Container, Top, Bottom } from './GroupPageStyles'
+import { Container, Top, Bottom, EditButton } from './GroupPageStyles'
 import { useSelector, useDispatch } from 'react-redux'
 import { useParams, useHistory } from 'react-router-dom'
 import { getGroup } from '../../../actions/groups'
 
-const GroupPage = ({groupPageId}) => {
+const GroupPage = ({setCurrentId}) => {
 
     const { group, groups } = useSelector((state) => state.groups)
 
@@ -29,7 +29,15 @@ const GroupPage = ({groupPageId}) => {
         }
     }
     */
-   console.log(group)
+
+    const handleClick = () => {
+        setCurrentId(group._id)
+        history.push('/createGroup')
+    }
+    
+     if(!group) return null
+
+   console.log(group._id)
     return (
         <div>
            <Container>
@@ -40,6 +48,7 @@ const GroupPage = ({groupPageId}) => {
                         <p>{group.members}</p>
                         <p>Organized by {group.organizer}</p>
                         <button>Join this Group</button>
+                        <EditButton onClick={handleClick} />
                     </div>
                     <div>
                         <img src={group.selectedFile} alt={group.groupName} />

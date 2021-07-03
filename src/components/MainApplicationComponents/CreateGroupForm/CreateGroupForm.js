@@ -1,21 +1,40 @@
 import React, { useState, useEffect } from 'react'
 import { MainForm } from './CreateGroupFormStyles'
 import FileBase from 'react-file-base64'
-import { useDispatch } from 'react-redux'
-import { createGroup } from '../../../actions/groups'
+import { useDispatch, useSelector } from 'react-redux'
+import { createGroup, updateGroup } from '../../../actions/groups'
+import { useHistory } from 'react-router-dom'
 
-const CreateGroupForm = () => {
+
+const CreateGroupForm = ({currentId, setCurrentId}) => {
 
     const [groupData, setGroupData] = useState({
         groupName: '', location: '', description: '', selectedFile: ''
     })
 
     const dispatch = useDispatch()
+    const history = useHistory()
+    const { group } = useSelector((state) => currentId ? state.groups.find((grp) => grp._id === currentId) : state.groups)
+
+    // const { group } = useSelector((state) => state.groups)
+
+    useEffect(() => {
+        if(group) setGroupData(group)
+    }, [group])
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        dispatch(createGroup(groupData))
+
+        if(currentId){
+            dispatch(updateGroup(currentId, groupData))
+        } else {
+            // dispatching createGroup on handleSubmit
+            dispatch(createGroup(groupData))
+        }
+
+        history.push(`/groupMain/${group._id}`)
     }
+
 
     return (
         <div>

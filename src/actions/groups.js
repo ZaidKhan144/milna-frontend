@@ -1,5 +1,5 @@
 
-import { FETCH_ALL, FETCH_GROUP , CREATE_GROUP } from '../constants/actionTypes'
+import { FETCH_ALL, FETCH_GROUP, CREATE_GROUP, UPDATE_GROUP } from '../constants/actionTypes'
 
 import * as api from '../api'
 
@@ -50,3 +50,15 @@ export const createGroup = (group) => async (dispatch) => {
         console.log(error.message)
     }
 } 
+
+// will update the group
+export const updateGroup = (id, group) => async (dispatch) => {
+
+    try {
+        const { data } = await api.updateGroup(id, group)
+        
+        dispatch({type: UPDATE_GROUP, payload: data})
+    } catch (error) {
+        console.log(error.message)
+    }
+}

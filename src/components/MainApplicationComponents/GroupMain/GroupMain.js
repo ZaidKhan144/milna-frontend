@@ -8,6 +8,8 @@ import 'react-circular-progressbar/dist/styles.css'
 
 const GroupMain = () => {
 
+        // useSelector allows you to extract data from redux store
+        // we are acessing the whole groups reducer
         const { groups } = useSelector((state) => state.groups)
 
         console.log(groups)
