@@ -7,3 +7,6 @@ This project is currently in development.
 
 ## Landing Page
 ![](MilnaLandingPage.gif)
+
+## Login/Sign up 
+![image](https://i.postimg.cc/nckz88KT/Milna-1.png)
