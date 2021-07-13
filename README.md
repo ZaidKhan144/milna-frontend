@@ -6,4 +6,4 @@ An app for arranging online groups that host in-person or virtual events for peo
 This project is currently in development. 
 
 ## Landing Page
-![](MilnaLandingPage.gif)
+![](/MilnaLandingPage.gif)
