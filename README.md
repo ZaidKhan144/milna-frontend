@@ -9,4 +9,4 @@ This project is currently in development.
 ![](MilnaLandingPage.gif)
 
 ## Login/Sign up 
-![image](https://i.postimg.cc/nckz88KT/Milna-1.png)
+![image](https://i.postimg.cc/DzQp6g3W/Milna-2.png)
