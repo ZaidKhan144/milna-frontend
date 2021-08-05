@@ -29,7 +29,7 @@ const SignUp = () => {
                     <input type="text" placeholder="Password" />
                     <button type="submit">Sign up</button>
                 </SignupForm>
-                <div>hello darkness my old friend</div>
+                <div className="darkness">hello darkness my old friend</div>
             </Container>
         </div>
     )

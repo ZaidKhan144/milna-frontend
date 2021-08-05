@@ -20,6 +20,10 @@ export const Container = styled.div`
     align-items: center;
     margin-top: 100px;
 
+    & .darkness{
+        font-size: 20px;
+    }
+
 `
 
 export const LoginForm = styled.div`

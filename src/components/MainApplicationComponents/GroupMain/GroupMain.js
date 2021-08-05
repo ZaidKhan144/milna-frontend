@@ -10,9 +10,13 @@ const GroupMain = () => {
 
         // useSelector allows you to extract data from redux store
         // we are acessing the whole groups reducer
-        const { groups } = useSelector((state) => state.groups)
+        const { groups, isLoading } = useSelector((state) => state.groups)
 
         console.log(groups)
+
+        // if no groups and not loading then nothing exists
+        if(!groups.length && !isLoading) return 'No groups'
+
     return (
         !groups?.length ? <div style={{width: 50, height: 50 }}>
             <CircularProgressbar value={66} text={66} />

@@ -40,7 +40,7 @@ const AppMain = () => {
                     <Route path="/eventMain" exact> <EventMain /> </Route>
                     <Route path="/groupMain/:id" exact> <GroupPage setCurrentId={setCurrentId} /> </Route>
                     <Route path="/eventMain/:id" exact> <EventPage /> </Route>
-                    <Route path="/createGroup" exact> <CreateGroupForm currentId={currentId} setCurrentId={setCurrentId} /> </Route>
+                    {/* <Route path="/createGroup" exact> <CreateGroupForm currentId={currentId} setCurrentId={setCurrentId} /> </Route> */}
                 </Switch>
         </div>
     )

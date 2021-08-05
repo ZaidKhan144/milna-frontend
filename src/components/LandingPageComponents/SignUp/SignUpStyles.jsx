@@ -53,3 +53,4 @@ export const Name = styled.div`
         margin-left: 15px;
     }
 `
+

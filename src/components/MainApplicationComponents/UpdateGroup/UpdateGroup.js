@@ -1,46 +1,42 @@
 import React, { useState, useEffect } from 'react'
-import { MainForm } from './CreateGroupFormStyles'
+import { MainForm } from '../CreateGroupForm/CreateGroupFormStyles'
 import FileBase from 'react-file-base64'
 import { useDispatch, useSelector } from 'react-redux'
-import { createGroup, updateGroup } from '../../../actions/groups'
-import { useHistory } from 'react-router-dom'
+import { useHistory, useParams } from 'react-router-dom'
+import { updateGroup } from '../../../actions/groups'
 
-
-const CreateGroupForm = ({currentId, setCurrentId}) => {
+const UpdateGroup = ({currentId, setCurrentId}) => {
 
     const [groupData, setGroupData] = useState({
         groupName: '', location: '', description: '', selectedFile: ''
     })
 
+    const { id } = useParams()
+
+    const group = useSelector((state) => id ? state.groups.groups.find((grp) => grp._id === id) : null)
+
     const dispatch = useDispatch()
     const history = useHistory()
-    // const group = useSelector((state) => currentId ? state.groups.groups.find((grp) => grp._id === currentId) : null)
 
-    // const { group } = useSelector((state) => state.groups)
-    //console.log(currentId)
-    // useEffect(() => {
-    //     if(group) setGroupData(group)
-    // }, [group])
+    useEffect(() => {
+        if(group) setGroupData(group)
+    }, [group])
 
     const handleSubmit = (e) => {
         e.preventDefault()
 
-        //if(currentId){
-         //   dispatch(updateGroup(currentId, groupData))
-        //} else {
-            // dispatching createGroup on handleSubmit
-           // dispatch(createGroup(groupData))
-        //}
-
-        dispatch(createGroup(groupData))
-        history.push('/groupMain')
+        if(id){
+            // If currentId is not null then dispatch updateGroup
+            dispatch(updateGroup(id, groupData))
+            history.push('/groupMain')
+        }
     }
-
 
     return (
         <div>
             <MainForm>
                 <form autoComplete="off" onSubmit={handleSubmit}>
+                    <h1>Editing a Group:</h1>
                     <label htmlFor="Group Name">Your Group Name: </label>
                     <input type="text" value={groupData.groupName} onChange={(e) => setGroupData({ ...groupData, groupName: e.target.value })} />
                     <label htmlFor="Location">Location: (City, State)</label>
@@ -59,4 +55,4 @@ const CreateGroupForm = ({currentId, setCurrentId}) => {
     )
 }
 
-export default CreateGroupForm
+export default UpdateGroup

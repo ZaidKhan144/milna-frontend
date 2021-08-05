@@ -1,5 +1,5 @@
 
-import { FETCH_ALL, FETCH_GROUP, CREATE_GROUP, UPDATE_GROUP } from '../constants/actionTypes'
+import { FETCH_ALL, FETCH_GROUP, CREATE_GROUP, UPDATE_GROUP, START_LOADING, STOP_LOADING } from '../constants/actionTypes'
 
 import * as api from '../api'
 
@@ -14,13 +14,14 @@ import * as api from '../api'
 export const getGroups = () => async (dispatch) => {
 
     try {
+        dispatch({ type: START_LOADING })
         // Over here we are fetching all the data from api and dispatching it.
         const { data } = await api.fetchGroups()
 
         dispatch({type: FETCH_ALL, payload: data})
-
+        dispatch({ type: STOP_LOADING })
     } catch (error) {
-        console.log(error.message)
+        console.log(error)
     }
 }
 
@@ -28,13 +29,15 @@ export const getGroups = () => async (dispatch) => {
 export const getGroup = (id) => async (dispatch) => {
 
     try {
+        dispatch({ type: START_LOADING })
         // Over here we are fetching all the data from api and dispatching it.
         const { data } = await api.fetchGroup(id)
 
         dispatch({type: FETCH_GROUP, payload: data})
+        dispatch({ type: STOP_LOADING })
 
     } catch (error) {
-        console.log(error.message)
+        console.log(error)
     }
 }
 
@@ -47,7 +50,7 @@ export const createGroup = (group) => async (dispatch) => {
         dispatch({type: CREATE_GROUP, payload: data})
 
     } catch (error) {
-        console.log(error.message)
+        console.log(error)
     }
 } 
 
@@ -59,6 +62,6 @@ export const updateGroup = (id, group) => async (dispatch) => {
         
         dispatch({type: UPDATE_GROUP, payload: data})
     } catch (error) {
-        console.log(error.message)
+        console.log(error)
     }
 }

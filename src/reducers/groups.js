@@ -1,19 +1,23 @@
-import { FETCH_ALL, FETCH_GROUP , CREATE_GROUP, UPDATE_GROUP } from '../constants/actionTypes'
+import { FETCH_ALL, FETCH_GROUP , CREATE_GROUP, UPDATE_GROUP, START_LOADING, STOP_LOADING } from '../constants/actionTypes'
 
 
-const groups = (state = { groups: [] }, action) => {
+const groups = ( state = { groups: [], isLoading: true }, action ) => {
     switch (action.type) {
+        case START_LOADING:
+            return { ...state, isLoading: true }
+        case STOP_LOADING:
+            return { ...state, isLoading: false }
         case FETCH_ALL:
             return {
                 ...state,
-                groups: action.payload
-            } 
+                groups: action.payload 
+            }
         case FETCH_GROUP:
             return { ...state, group: action.payload } 
         case CREATE_GROUP:
-            return { ...state, groups: [...state.groups, action.payload] }
+            return { ...state, groups: [ ...state.groups, action.payload ] }
         case UPDATE_GROUP:
-            return { ...state, groups: state.groups.map((group) => group._id === action.payload._id ? action.payload : group) }
+            return { ...state, groups: state.groups.map((group) => (group._id === action.payload._id ? action.payload : group)) }
         default:
             return state
     }
