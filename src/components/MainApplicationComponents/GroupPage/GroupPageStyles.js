@@ -25,10 +25,20 @@ export const Top = styled.div`
 
         & button{
             margin-top: 50px;
-            font-size: 20px;
-            background-color: orange;
+            /* font-size: 20px; */
+            background-color: #1f8287;
             padding: 10px;
-            border-radius: 10px;
+            border-radius: 3px;
+            width: 100%;
+        }
+
+        & a{
+            display: block;
+            margin-top: 50px;
+            background-color: #1f8287;
+            text-align: center;
+            padding: 10px;
+            border-radius: 3px;
         }
     }
 
@@ -48,6 +58,16 @@ export const Bottom = styled.div`
         padding: 20px 0;
         font-size: 20px;
         font-weight: bold;
+    }
+
+    & p{
+        margin-bottom: 20px;
+    }
+
+    & button{
+        background-color: #d11a2a;
+        padding: 10px;
+        border-radius: 5px;
     }
 
 `

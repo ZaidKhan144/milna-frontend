@@ -1,4 +1,4 @@
-import { FETCH_ALL, FETCH_GROUP , CREATE_GROUP, UPDATE_GROUP, START_LOADING, STOP_LOADING } from '../constants/actionTypes'
+import { FETCH_ALL, FETCH_GROUP , CREATE_GROUP, UPDATE_GROUP, START_LOADING, STOP_LOADING, DELETE_GROUP } from '../constants/actionTypes'
 
 
 const groups = ( state = { groups: [], isLoading: true }, action ) => {
@@ -18,6 +18,8 @@ const groups = ( state = { groups: [], isLoading: true }, action ) => {
             return { ...state, groups: [ ...state.groups, action.payload ] }
         case UPDATE_GROUP:
             return { ...state, groups: state.groups.map((group) => (group._id === action.payload._id ? action.payload : group)) }
+        case DELETE_GROUP:
+            return { ...state, groups: state.groups.filter((group) => group._id !== action.payload)}
         default:
             return state
     }

@@ -3,9 +3,10 @@ import GroupData from '../GroupMain/GroupData'
 import { Container, Top, Bottom, EditButton } from './GroupPageStyles'
 import { useSelector, useDispatch } from 'react-redux'
 import { useParams, useHistory } from 'react-router-dom'
-import { getGroup } from '../../../actions/groups'
+import { getGroup, deleteGroup } from '../../../actions/groups'
 import { Link } from 'react-router-dom'
 import { CircularProgressbar } from 'react-circular-progressbar'
+
 
 const GroupPage = ({setCurrentId}) => {
 
@@ -67,6 +68,10 @@ const GroupPage = ({setCurrentId}) => {
                     <Bottom>
                         <h1>What we're about</h1>
                         <p>{group.description}</p>
+                        <button onClick={()=> {
+                            dispatch(deleteGroup(group._id)) 
+                            history.push('/groupMain')
+                        }}>Delete</button>
                     </Bottom>
                 </Container>
             </div>

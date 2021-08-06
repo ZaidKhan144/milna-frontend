@@ -65,3 +65,15 @@ export const updateGroup = (id, group) => async (dispatch) => {
         console.log(error)
     }
 }
+
+// will delete the group
+export const deleteGroup = (id) => async (dispatch) => {
+    
+    try {
+        await api.deleteGroup(id)
+
+        dispatch({type: 'DELETE', payload: id})
+    } catch (error) {
+        console.log(error)
+    }
+}
