@@ -34,7 +34,7 @@ const GroupMain = () => {
                                     <h1>{gData.groupName}</h1>
                                     <p>{gData.location}</p>
                                     <p>{gData.description}</p>
-                                    <p>{gData.members}</p>
+                                    <p>Members: {gData.members}</p>
                                 </div>
                             </Link>
                         )

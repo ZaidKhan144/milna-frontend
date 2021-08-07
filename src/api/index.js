@@ -12,3 +12,6 @@ export const updateGroup = (id, updatedGroup) => API.patch(`/groups/${id}`, upda
 
 export const deleteGroup = (id) => API.delete(`/groups/${id}`)
 
+export const joinGroup = (id) => API.patch(`/groups/${id}/joinGroup`)
+
+

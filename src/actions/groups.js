@@ -1,5 +1,5 @@
 
-import { FETCH_ALL, FETCH_GROUP, CREATE_GROUP, UPDATE_GROUP, START_LOADING, STOP_LOADING } from '../constants/actionTypes'
+import { FETCH_ALL, FETCH_GROUP, CREATE_GROUP, UPDATE_GROUP, DELETE_GROUP, START_LOADING, STOP_LOADING, JOIN_GROUP } from '../constants/actionTypes'
 
 import * as api from '../api'
 
@@ -72,8 +72,22 @@ export const deleteGroup = (id) => async (dispatch) => {
     try {
         await api.deleteGroup(id)
 
-        dispatch({type: 'DELETE', payload: id})
+        dispatch({type: DELETE_GROUP, payload: id})
     } catch (error) {
         console.log(error)
     }
 }
+
+// will join the group
+export const joinGroup = (id) => async (dispatch) => {
+    
+    try {
+        const { data } = await api.joinGroup(id)
+        
+        dispatch({type: JOIN_GROUP, payload: data})
+    } catch (error) {
+        console.log(error)
+    }
+}
+
+

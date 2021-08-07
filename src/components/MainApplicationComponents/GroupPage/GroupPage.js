@@ -3,7 +3,7 @@ import GroupData from '../GroupMain/GroupData'
 import { Container, Top, Bottom, EditButton } from './GroupPageStyles'
 import { useSelector, useDispatch } from 'react-redux'
 import { useParams, useHistory } from 'react-router-dom'
-import { getGroup, deleteGroup } from '../../../actions/groups'
+import { getGroup, deleteGroup, joinGroup } from '../../../actions/groups'
 import { Link } from 'react-router-dom'
 import { CircularProgressbar } from 'react-circular-progressbar'
 
@@ -42,7 +42,7 @@ const GroupPage = ({setCurrentId}) => {
 
     // the reason for this condition is to prevent rendering something before data is actually fetched
      if(!group) return null
-
+console.log(group.members)
     return (
         isLoading ? <div style={{width: 50, height: 50 }}>
         <CircularProgressbar value={66} text={66} />
@@ -53,9 +53,11 @@ const GroupPage = ({setCurrentId}) => {
                         <div>
                             <h1>{group.groupName}</h1>
                             <p>{group.location}</p>
-                            <p>{group.members}</p>
+                            <p>Members: {group.members}</p>
                             <p>Organized by {group.organizer}</p>
-                            <button>Join this Group</button>
+                            <button onClick={() => {
+                                dispatch(joinGroup(group._id))
+                            }}>Join this Group {group.members} </button>
                             {/* <EditButton onClick={handleClick} /> */}
                             <Link to={`/updateGroup/${group._id}`}>
                                 Edit Group

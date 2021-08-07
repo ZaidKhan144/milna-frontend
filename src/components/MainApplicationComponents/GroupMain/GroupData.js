@@ -8,7 +8,7 @@ const GroupData = [
         groupName: 'Adventures Around Houston!',
         location: 'Houston, TX',
         description: 'Happy Hours, Socials, Watch Parties, Networking, and More!',
-        members: '35 members',
+        // members: '35 members',
         organizer: 'Alana Smith'
     },
     {
@@ -17,7 +17,7 @@ const GroupData = [
         groupName: 'Everything\'s All right New York!',
         location: 'New York city, NY',
         description: 'Happy Hours, Socials, Watch Parties, Networking, and More!',
-        members: '35 members',
+        // members: '35 members',
         organizer: 'Cate Blanchett'
     }
 ]
