@@ -6,18 +6,23 @@ export const NavBar = styled.div`
     left: 0;
     top: 0;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
-
+    background-color: forestgreen;
+    
     & h1{
         margin: 0 80px;
-        font-size: 25px;
+        font-size: 15px;
         padding: 10px 0;
     }
     & a:nth-child(2){
         margin-right: 80px;
         font-size: 20px;
         padding: 10px 0;
+    }
+
+    li{
+        list-style-type: none;
     }
 `
 export const Header = styled.div`

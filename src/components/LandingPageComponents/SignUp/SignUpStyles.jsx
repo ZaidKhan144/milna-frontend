@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components'
 
-export const SignupForm = styled.div`
+export const SignupForm = styled.form`
     text-align: center;
     width: 20%;
 
@@ -25,6 +25,7 @@ export const SignupForm = styled.div`
         padding: 10px 20px;
         outline: none;
         transition: border 1s ease;
+        color: #fff;
         
         &:focus{
             border: 1px solid #D8D8DC;

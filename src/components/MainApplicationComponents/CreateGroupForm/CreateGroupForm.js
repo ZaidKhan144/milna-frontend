@@ -4,7 +4,7 @@ import FileBase from 'react-file-base64'
 import { useDispatch, useSelector } from 'react-redux'
 import { createGroup, updateGroup } from '../../../actions/groups'
 import { useHistory } from 'react-router-dom'
-
+import AppMainNav from '../AppMainNav/AppMainNav'
 
 const CreateGroupForm = ({currentId, setCurrentId}) => {
 
@@ -36,9 +36,10 @@ const CreateGroupForm = ({currentId, setCurrentId}) => {
         history.push('/groupMain')
     }
 
-
     return (
         <div>
+            
+            <AppMainNav />
             <MainForm>
                 <form autoComplete="off" onSubmit={handleSubmit}>
                     <label htmlFor="Group Name">Your Group Name: </label>
@@ -55,6 +56,7 @@ const CreateGroupForm = ({currentId, setCurrentId}) => {
                     <button type="submit">Submit</button>
                 </form>
             </MainForm>
+      
         </div>
     )
 }

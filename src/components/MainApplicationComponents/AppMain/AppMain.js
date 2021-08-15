@@ -30,9 +30,11 @@ const AppMain = () => {
                 <AppMainNav />
                 {/* {location.pathname === '/createGroup' ? <AppMainNav /> : null} */}
                 <Switch>
+                    {/* Did this cz I don't want splitHeader to be shown on Group and Event Pages */}
                     <Route exact path="/groupMain/:id"></Route>
                     <Route exact path="/eventMain/:id"></Route>
                     <Route path="/"> <SplitHeader /> </Route>
+                    {/* <Route path="/createGroup" exact> <CreateGroupForm /> </Route> */}
                 </Switch>
                 <Switch>
                     <Route path="/" exact> <SplitHeader /> </Route>

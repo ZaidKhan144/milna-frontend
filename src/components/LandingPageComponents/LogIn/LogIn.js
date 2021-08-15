@@ -1,15 +1,33 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { Header, Container, LoginForm, Divider, GoogleBtn } from './LogInStyles'
+import TextField from '../Input/Input'
+import { InputAdornment, IconButton, Input } from '@material-ui/core'
+import Visibility from '@material-ui/icons/Visibility'
+import VisibilityOff from '@material-ui/icons/VisibilityOff'
+
 
 const LogIn = () => {
+
+    const [ showPassword, setShowPassword ] = useState(false)
+
+    const handleShowPassword = () => setShowPassword((prevShowPassword) => !prevShowPassword)
+
+    const handleSubmit = () => {
+        
+    }
+
+    const handleChange = () => {
+
+    }
+
     return (
         <div>
             <Header>
                 <h1><Link to="/">Milna</Link></h1>
             </Header> 
             <Container>
-                <LoginForm>
+                <LoginForm onSubmit={handleSubmit}>
                     <h1>Log in to Milna</h1>
                     <p>Don't have an account yet? <Link to="/signup">&nbsp;Sign up for free</Link></p>
                     <GoogleBtn> 
@@ -19,8 +37,24 @@ const LogIn = () => {
                     <Divider>
                         <h2>Or</h2>
                     </Divider>
-                    <input type="text" placeholder="Email address" />
-                    <input type="text" placeholder="Password" />
+                    {/* <input type="text" placeholder="Email address" /> */}
+                    <TextField name="email" type="email" label="Email Address" handleChange={handleChange} placeholder="Email address" />
+                    <Input 
+                        required 
+                        name="password" 
+                        type={showPassword ? 'text' : 'password'} 
+                        label="Password" 
+                        handleChange={handleChange} 
+                        placeholder="Password" 
+                        handleShowPassword={handleShowPassword} 
+                        endAdornment={
+                        <InputAdornment position="end">
+                            <IconButton onClick={handleShowPassword}>
+                                {!showPassword ? <Visibility /> : <VisibilityOff />}
+                            </IconButton>
+                        </InputAdornment>
+                        }
+                    />
                     <button type="submit">Log in</button>
                 </LoginForm>
                 <div>Hello</div>

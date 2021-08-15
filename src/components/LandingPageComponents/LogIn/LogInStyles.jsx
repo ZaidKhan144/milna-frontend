@@ -26,7 +26,7 @@ export const Container = styled.div`
 
 `
 
-export const LoginForm = styled.div`
+export const LoginForm = styled.form`
     text-align: center;
 
     h1{
@@ -50,6 +50,7 @@ export const LoginForm = styled.div`
         padding: 10px 20px;
         outline: none;
         transition: border 1s ease;
+        color: #fff;
         
         &:focus{
             border: 1px solid #D8D8DC;

@@ -4,6 +4,7 @@ import FileBase from 'react-file-base64'
 import { useDispatch, useSelector } from 'react-redux'
 import { useHistory, useParams } from 'react-router-dom'
 import { updateGroup } from '../../../actions/groups'
+import AppMainNav from '../AppMainNav/AppMainNav'
 
 const UpdateGroup = ({currentId, setCurrentId}) => {
 
@@ -34,6 +35,7 @@ const UpdateGroup = ({currentId, setCurrentId}) => {
 
     return (
         <div>
+            <AppMainNav />
             <MainForm>
                 <form autoComplete="off" onSubmit={handleSubmit}>
                     <h1>Editing a Group:</h1>
