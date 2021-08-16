@@ -1,10 +1,31 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { NavBar } from '../AppMain/AppMainStyles'
-import { Link } from 'react-router-dom'
+import { Link, useHistory } from 'react-router-dom'
+import { useDispatch } from 'react-redux'
+import './AppMainNav.css'
 
  const AppMainNav = () => {
 
-    const user = null;
+    const [user, setUser] = useState(JSON.parse(localStorage.getItem('profile')));
+
+    const dispatch = useDispatch();
+    const history = useHistory()
+
+    const logout = () => {
+        dispatch({ type: 'LOGOUT'})
+
+        history.push('/')
+
+        setUser(null)
+    }
+
+    console.log(user)
+
+    // useEffect(() => {
+    //     const token = user?.token 
+
+    //     setUser(JSON.parse(localStorage.getItem('profile')))
+    // })
 
     return (
         <div>
@@ -15,11 +36,16 @@ import { Link } from 'react-router-dom'
                 {
                     // If user is logged in 
                     user ? (
-                        <div>
-                            <div>
-                                <img src={user?.result.imageUrl} alt={user?.result.name} />
-                                <p>{user?.result.name.charAt(0)}</p> 
-                                <button>Logout</button>
+                        <div className="profile-header">
+                            <div className="profile">
+                                <div className="profile-img">
+                                { user?.result.imageUrl ? 
+                                    <img src={user?.result.imageUrl} alt={user?.result.name} /> :
+                                    <p>{user?.result.name.charAt(0)}</p>
+                                }
+                                </div>
+                                <p>{user?.result.name}</p> 
+                                <button onClick={logout}>Logout</button>
                             </div>
                         </div>
                     ) : (

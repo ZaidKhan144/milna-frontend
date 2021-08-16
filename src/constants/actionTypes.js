@@ -7,3 +7,6 @@ export const START_LOADING = 'START_LOADING'
 export const STOP_LOADING = 'STOP_LOADING'
 export const DELETE_GROUP = 'DELETE_GROUP'
 export const JOIN_GROUP = 'JOIN_GROUP'
+export const AUTH = 'AUTH'
+export const LOGOUT = 'LOGOUT'
+
