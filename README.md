@@ -41,5 +41,4 @@ $ npm start
 - ESLint - A linter tool to standardize code
 - Prettier - Code formatter
 
-## not finished yet...
 
